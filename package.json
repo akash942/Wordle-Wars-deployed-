@@ -1,0 +1,19 @@
+{
+  "name": "wordle_wars",
+  "version": "1.0.0",
+  "description": "a wordle clone called wordle-wars",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "dev": "cd client && npm run start"
+  },
+  "author": "akash",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
