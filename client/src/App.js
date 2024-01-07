@@ -47,7 +47,7 @@ function App() {
 
   const checkWord = async (word) => {
     try {
-      return await fetch(`check?word=${word}`)
+      return await fetch(`/check?word=${word}`)
         .then((res) => {
           return res.json();
         })
