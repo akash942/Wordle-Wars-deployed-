@@ -1,11 +1,13 @@
 import express from 'express'
 import { words } from './words.js'
 import cors from 'cors'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
-app.use(cors({origin: 'http://localhost:8080/'}))
+app.use(cors({origin: '*'}))
 
 app.get('/assign', (req, res) => {
   const word = words[Math.floor(Math.random()*words.length)]
