@@ -47,7 +47,7 @@ function App() {
 
   const checkWord = async (word) => {
     try {
-      return await fetch(`/check?word=${word}`)
+      return await fetch(`https://wordle-wars-backend.onrender.com/check?word=${word}`)
         .then((res) => {
           return res.json();
         })
@@ -113,7 +113,7 @@ function App() {
   useEffect(() => {
     if (!answer.current) {
       try {
-        fetch("/assign")
+        fetch("https://wordle-wars-backend.onrender.com/assign")
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
